@@ -218,6 +218,14 @@ PresetInterpolatorServer : PresetInterpolator {
 		}.forkIfNeeded;
 	}
 
+	addPreset { |point|
+		model.add(point);
+	}
+	
+	movePreset { |index, point|
+		model.movePoint(index, point);
+	}
+	
 	free {
 		model.free;
 		synth.free;
