@@ -1,8 +1,8 @@
 PresetInterpolatorServer : PresetInterpolator {
 	var <synth, <bus, def;
 
-	*new { arg model, dimensions=2;
-		model = model ?? {InterpolatorServer(dimensions)};
+	*new { arg model;
+		model = model ?? {InterpolatorServer()};
 		^super.newCopyArgs(model).init;
 	}
 	
